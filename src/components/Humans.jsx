@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import Card from "./Card";
+import Loading from "./Loading";
 
 const GET_HUMANS = gql`
   query GetHumans {
@@ -22,7 +23,7 @@ const GET_HUMANS = gql`
 
 const Humans = () => {
   const { loading, error, data } = useQuery(GET_HUMANS);
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />
   if (error) return <p>Error :/</p>;
   const {
     characters: { results: characters },

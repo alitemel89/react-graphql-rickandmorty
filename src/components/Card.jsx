@@ -3,9 +3,11 @@ import { BiCurrentLocation } from "react-icons/bi";
 
 const Card = ({ character }) => {
   return (
-    <div className="bg-white text-gray-700 w-80 min-h-[5rem] rounded-md shadow-lg overflow-hidden">
+    <div className="bg-white text-gray-700 w-80 min-h-[5rem]
+     rounded-md shadow-lg overflow-hidden hover:scale-105 transition-all ease-in-out 
+     shadow-pink-500/30 border-2 border-white">
       <img src={character.image} alt="product" className="w-full" />
-      <div className="p-5 flex flex-col gap-2">
+      <div className="p-4 flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <span className="px-3 py-1 rounded-full text-xs bg-gray-100">
             {character.species}
