@@ -3,6 +3,8 @@ import Aliens from "./components/Aliens";
 import Humans from "./components/Humans";
 import Navbar from "./components/Navbar";
 
+
+
 function App() {
   return (
     <BrowserRouter>

@@ -68,7 +68,7 @@ const Navbar = () => {
             hover:rounded-lg hover:px-5 transition-all duration-400" onClick={() => setOpen(false)}>
               <MdFavorite size={20} className="mr-4" /> Aliens
             </Link>
-            <Link to="humans" className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
+            <Link to="/humans" className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
             hover:rounded-lg hover:px-5 transition-all duration-400" onClick={() => setOpen(false)}>
               <FaUserFriends size={20} className="mr-4" /> Humans
             </Link>
