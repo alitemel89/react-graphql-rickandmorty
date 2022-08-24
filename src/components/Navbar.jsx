@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { FaUserFriends } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import SearchBox from "./SearchBox";
 
-const Navbar = () => {
+const Navbar = ({ query, handleSearch }) => {
   const [open, setOpen] = useState(false);
+
 
   const handleNav = () => {
     setOpen(!open);
@@ -24,15 +26,9 @@ const Navbar = () => {
         </h2>
       </div>
 
-      {/* Search Input */}
-      <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
-        <AiOutlineSearch size={25} />
-        <input
-          className="bg-transparent p-2 w-full focus:outline-none"
-          type="text"
-          placeholder="Search characters"
-        />
-      </div>
+      {/* Search Box */}
+      <SearchBox query={query} handleSearch={handleSearch} />
+
       {/* Link button */}
       <Link to="/" className="bg-pink-500 text-white hidden md:flex items-center py-2 rounded-full px-4">
         GraphQL API
