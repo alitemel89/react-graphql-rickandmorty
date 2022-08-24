@@ -32,7 +32,7 @@ const Aliens = ({ query }) => {
 
   const fuse = new Fuse(characters, {
     includeScore: true,
-    keys: ["name", "status", "gender", "species"],
+    keys: ["name", "gender"],
   });
 
   const results = fuse.search(query);
