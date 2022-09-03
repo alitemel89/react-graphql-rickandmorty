@@ -9,7 +9,6 @@ import SearchBox from "./SearchBox";
 const Navbar = ({ query, handleSearch }) => {
   const [open, setOpen] = useState(false);
 
-
   const handleNav = () => {
     setOpen(!open);
   };
@@ -30,9 +29,13 @@ const Navbar = ({ query, handleSearch }) => {
       <SearchBox query={query} handleSearch={handleSearch} />
 
       {/* Link button */}
-      <Link to="/" className="bg-pink-500 text-white hidden md:flex items-center py-2 rounded-full px-4">
+      <a
+        href="https://rickandmortyapi.com/documentation/"
+        target="_blank"
+        className="bg-pink-500 text-white hidden md:flex items-center py-2 rounded-full px-4"
+      >
         GraphQL API
-      </Link>
+      </a>
 
       {/* Mobile Menu */}
       {/* Overlay */}
@@ -55,17 +58,23 @@ const Navbar = ({ query, handleSearch }) => {
           size={30}
           className="absolute right-4 top-4 cursor-pointer"
         />
-        <h2 className="text-xl p-4">
-          Rick and Morty
-        </h2>
+        <h2 className="text-xl p-4">Rick and Morty</h2>
         <nav>
           <ul className="flex flex-col p-4 text-gray-800">
-            <Link to="/aliens" className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
-            hover:rounded-lg hover:px-5 transition-all duration-400" onClick={() => setOpen(false)}>
+            <Link
+              to="/aliens"
+              className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
+            hover:rounded-lg hover:px-5 transition-all duration-400"
+              onClick={() => setOpen(false)}
+            >
               <MdFavorite size={20} className="mr-4" /> Aliens
             </Link>
-            <Link to="/humans" className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
-            hover:rounded-lg hover:px-5 transition-all duration-400" onClick={() => setOpen(false)}>
+            <Link
+              to="/humans"
+              className="ml-2 text-lg py-4 flex items-center text-white hover:bg-pink-50/50 
+            hover:rounded-lg hover:px-5 transition-all duration-400"
+              onClick={() => setOpen(false)}
+            >
               <FaUserFriends size={20} className="mr-4" /> Humans
             </Link>
           </ul>
