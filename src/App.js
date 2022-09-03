@@ -3,6 +3,7 @@ import Aliens from "./components/Aliens";
 import Humans from "./components/Humans";
 import Navbar from "./components/Navbar";
 import { useState } from 'react'
+import Hero from "./components/Hero";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Navbar query={query} handleSearch={handleSearch} />
       <Routes>
+        <Route path="/" element={<Hero />} />
         <Route path="/aliens" element={<Aliens query={query} handleSearch={handleSearch} />}/>
         <Route path="/humans" element={<Humans query={query} handleSearch={handleSearch} />}/>
       </Routes>

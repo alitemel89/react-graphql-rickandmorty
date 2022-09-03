@@ -21,21 +21,30 @@ const Navbar = ({ query, handleSearch }) => {
           <FiMenu size={30} color="#ccc" />
         </div>
         <h2 className="text-xl sm:text-2xl lg:text-3xl px-2 text-white ml-2">
-          Rick and Morty
+          Characters of Series
         </h2>
       </div>
 
       {/* Search Box */}
       <SearchBox query={query} handleSearch={handleSearch} />
 
-      {/* Link button */}
-      <a
-        href="https://rickandmortyapi.com/documentation/"
-        target="_blank"
-        className="bg-pink-500 text-white hidden md:flex items-center py-2 rounded-full px-4"
-      >
-        GraphQL API
-      </a>
+
+      {/* Right Side */}
+      <div className="hidden md:flex items-center space-x-4">
+        <Link to="/" className="text-white hover:text-pink-200">
+          Home
+        </Link>
+
+        {/* Link button */}
+        <a
+          href="https://rickandmortyapi.com/documentation/"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-pink-500 text-white  py-2 rounded-full px-4"
+        >
+          GraphQL API
+        </a>
+      </div>
 
       {/* Mobile Menu */}
       {/* Overlay */}
